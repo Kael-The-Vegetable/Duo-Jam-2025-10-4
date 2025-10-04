@@ -37,8 +37,7 @@ public class CameraManager : Singleton<CameraManager>
 		_mousePos = pointer;
 
 		if (!_isDragging) return;
-		_difference = GetMousePos() - _cam.transform.position;
-		_cam.transform.position = _dragOrigin - _difference;
+		RealignCamera();
 	}
 
 	private void OnScroll(Vector2 delta)
@@ -52,6 +51,8 @@ public class CameraManager : Singleton<CameraManager>
 		{
 			_cam.orthographicSize /= 1 + scrollDelta;
 		}
+
+		if (_isDragging) RealignCamera();
 	}
 
 	private void OnRightClick(bool isClicked)
@@ -62,4 +63,10 @@ public class CameraManager : Singleton<CameraManager>
 
 	private Vector3 GetMousePos()
 		=> _cam.ScreenToWorldPoint(_mousePos);
+
+	private void RealignCamera()
+	{
+		_difference = GetMousePos() - _cam.transform.position;
+		_cam.transform.position = _dragOrigin - _difference;
+	}
 }
