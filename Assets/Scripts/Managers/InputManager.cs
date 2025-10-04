@@ -10,6 +10,7 @@ public class InputManager : PersistentSingleton<InputManager>, InputSystemAction
 
 	#region Events
 	public UnityEvent<Vector2> Pointer { get; private set; } = new UnityEvent<Vector2>();
+	public UnityEvent<Vector2> Scroll { get; private set; } = new UnityEvent<Vector2>();
 	public UnityEvent<bool> LeftClick { get; private set; } = new UnityEvent<bool>();
 	public UnityEvent<bool> MiddleClick { get; private set; } = new UnityEvent<bool>();
 	public UnityEvent<bool> RightClick { get; private set; } = new UnityEvent<bool>();
@@ -63,6 +64,11 @@ public class InputManager : PersistentSingleton<InputManager>, InputSystemAction
 			MiddleClick.Invoke(true);
 		else if (context.canceled)
 			MiddleClick.Invoke(false);
+	}
+
+	public void OnScroll(InputAction.CallbackContext context)
+	{
+		Scroll.Invoke(context.ReadValue<Vector2>());
 	}
 	#endregion
 }
