@@ -857,6 +857,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraManager
   <AutoUnparentOnAwake>k__BackingField: 1
   _scrollMult: 0.1
+  _scrollMin: 0.5
+  _scrollMax: 10
+  _playArea:
+    serializedVersion: 2
+    x: -10
+    y: -10
+    width: 20
+    height: 20
 --- !u!4 &1587653611
 Transform:
   m_ObjectHideFlags: 0
