@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7170218167422299720}
   - component: {fileID: 4730684020567283875}
   - component: {fileID: 14369378382201599}
-  - component: {fileID: 8583059084098214409}
+  - component: {fileID: 7687435305269331478}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Enemy 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.96981126, g: 0.5324812, b: 0.5324812, a: 1}
+  m_Color: {r: 0.5261669, g: 0.85660374, b: 0.35395512, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40f5c7b789fa96d4facbd624d2589a05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
---- !u!114 &8583059084098214409
+--- !u!114 &7687435305269331478
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,11 +117,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
   m_Target: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_LoopMode: 0
   m_Method: 1
   m_Duration: 1
-  m_MaxSpeed: 5
+  m_MaxSpeed: 10
   m_EasingMode: 1
   m_AlignmentMode: 3
   m_ObjectForwardAxis: 2
